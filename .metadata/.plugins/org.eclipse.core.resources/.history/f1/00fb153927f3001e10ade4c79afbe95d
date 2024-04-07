@@ -1,0 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>req_quiz01.jsp</title>  //더ㅏ블 파스인트 해야함 -> 변환 like toString
+</head>
+<body>
+
+</body>
+</html>

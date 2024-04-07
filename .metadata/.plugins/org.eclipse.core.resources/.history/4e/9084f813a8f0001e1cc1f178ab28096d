@@ -1,0 +1,313 @@
+package i;
+
+import java.beans.Statement;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.List;
+
+public class PersonsVO {
+
+	private int id;
+	private String lastname;
+	private String firstname;
+	private int age;
+	private String city;
+	
+	
+	
+	
+	
+	public PersonsVO(int id, String lastname, String firstname, int age, String city) {
+		super();
+		this.id = id;
+		this.lastname = lastname;
+		this.firstname = firstname;
+		this.age = age;
+		this.city = city;
+	}
+
+
+
+
+
+	public int getId() {
+		return id;
+	}
+
+
+
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+
+
+
+	public String getLastname() {
+		return lastname;
+	}
+
+
+
+
+
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
+	}
+
+
+
+
+
+	public String getFirstname() {
+		return firstname;
+	}
+
+
+
+
+
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
+	}
+
+
+
+
+
+	public int getAge() {
+		return age;
+	}
+
+
+
+
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+
+
+
+
+	public String getCity() {
+		return city;
+	}
+
+
+
+
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+
+
+	public String toString() {
+		return "[id="+id+", lastname"+lastname+", firstname="+firstname+",age="+age+",city="+city+"]";
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String url = "jdbc:mariadb://localhost:13306/testdb";
+		String user = "root";
+		String Password = "!qwe123";
+		
+		//Db연동을 위한 객체 선언
+		
+		Connection conn=null;
+		Statement stmt = null;
+		ResultSet rs = null;
+		
+		
+		
+		public PersonsDAO(String url, String user, String Password) {
+			this.
+			this.
+			this.
+			
+			try {
+				//드라이버 로드
+				Class.forName(org.mariadb.jdbc.Driver);
+				//connection객체 생성
+				conn = DriverManager.getConnection(url,user,Password);
+			}catch (ClassNotFoundException ce) {
+				System.out.println("드라이버 로드 실패");
+			}catch (SQLException sqle) {
+				System.out.println("DB연동실패");
+				System.out.println(sqle.getMessage());
+				
+			}
+		}
+		
+		
+		
+		
+		//insert
+		pulbic int insertPersons(PersonsVo vo) {
+			int result = 0;
+			String sql ="insert into Persons (lastname,firstname, age, city)"+"values('"+vo.getName()+"'",'"','','',)
+			
+			retrun result;
+		}
+		try {
+			stmt = conn.createStatement();
+			result = stmt.executeUpdate(sql);
+		} catch (SQLException e) {
+			
+			System.out.println("SQL 연동실패");
+			System.out.println(e.getMessage());
+		} finally {
+			try {
+				
+			} catch (Exception e) {
+				if(stmt != null) stmt.close;
+			}catch (Exception e2) {
+				
+			}
+			return result;
+		}
+		
+		
+		
+		//selectAll
+		
+		public List<PersonsVO> selectAll(){
+			List<PersonsVO> list = new ArrayList<>();
+			
+			String sql = "select * from Persons order by id desc";
+			
+			
+			try {
+				stmt = conn.createStatement();
+				rs = stmt.execute(sql);
+				while(rs.next()) {
+					int id = rs.getInt("id");
+					String lastname = rs.getString("lastName");
+					String lastname = rs.getString("firstName");
+					int age = rs.getInt("age");
+					String lastname = rs.getString("city");
+					personsVo vo = new personsVo(id,lastName,firstName,age, city);
+					list.add(vo);
+					
+				}
+			} catch (SQLException e) {
+				System.out.println("연동실패");
+			} finally {
+				try {
+					if(stmt = null) stmt.close;
+					if(rs != null) rs.close();
+				} catch (Exception e) {
+					
+				}
+			}
+			
+			
+			
+		}
+		
+		//selectOne
+		
+		public PersonsVO selectOne(int id) {
+			PersonsVO vo = null;
+			String sql = "select * from Persons where id = '"+id+"'"; //자동형변환
+			
+			try {
+				stmt =conn.createStatement();
+				rs = stmt.executeQuery(sql);
+				if(rs.next()) {
+					vo = new PersonsVO(rs.getInt("id"),
+							rs.getString("lastName"),
+							rs.getString("firstName"),
+							rs.getInt(age),
+							rs.getString("city"));
+				}
+				
+			} catch (Exception e) {
+				// TODO: handle exception
+			}finally {
+				try {
+				if(stmt != null) stmt.close();
+				if(rs != null)rs.close();
+				} catch (Exception e2) {
+					// TODO: handle exception
+				}
+			}
+			return vo;
+		}
+		
+		//uodate
+		
+		public int updatePersons(PersonsVO vo) {
+			int result = 0;
+			
+			String sql = "update persons set lastName=''"+vo.getLastname()
+			+",firstname='"+vo.getFirstname()
+			+"' ',age="+vo.getAge()+ ", city=''"
+					+"where if";
+			
+			
+			
+			try {
+				stmt = conn.createStatement();
+				result = stmt.executeQuery();
+				
+			} catch (SQLException e) {
+				System.out.println("연동실패");
+				System.out.println(e.getMessage());
+			} finally {
+				try {
+					if(stmt != null)stmt.close();
+					
+				} catch (Exception e2) {
+					
+				}
+			}
+			
+			
+			
+			return result;
+		}
+		
+		//delete
+		public int deletePersons(int id ) {
+			int result = 0;
+			
+			String sql = "delete from persons where id ='"+id+"'";
+			
+			try {
+				stmt =conn.createStatement();
+				result =stmt.executeQuery();
+						
+			} catch (SQLException e) {
+				System.out.println("SQL연동 실패");
+				System.out.println(e.getMessage());
+			} finally {
+				try {
+					if(stmt != null)stmt.close();
+				} catch (Exception e) {}
+			}
+			
+		}
+				
+			
+			
+			
+		
+
+		
+		
+		
+
+	}
+
+}
+

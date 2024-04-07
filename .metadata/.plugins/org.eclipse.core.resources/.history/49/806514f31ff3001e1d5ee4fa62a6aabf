@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+	<!DOCTYPE html>
+	<%
+	
+	String name = request.getParameter("name");
+	String password = request.getParameter("password");
+	
+	
+	
+	%>
+	<html>
+	<head>
+			<meta charset="UTF-8">
+			<title>Insert title here</title>
+	</head>
+	<body>
+			아이디 : <%=name %>
+			비밀번호 :<%=pw %>
+			이름 :
+			주소 :
+			관심분야 :
+			전공 :
+			통신사 :
+	</body>
+</html>

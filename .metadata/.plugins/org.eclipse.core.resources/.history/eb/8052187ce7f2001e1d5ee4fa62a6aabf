@@ -1,0 +1,39 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+<%
+	List<String> list = new ArrayList<>();
+	
+	list.add("홍킬동");
+	list.add("김킬동");
+	
+	Map<Integer, String> map = new HashMap<>();
+	map.put(1, "홍길");
+	map.put(1, "김");
+	
+	Random ran = new Random();
+	int num = ran.nextInt(10);
+	
+	Date date  = new Date();
+	simpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+	String now = sdf.format(date);
+%>    
+    
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="UTF-8">
+			<title>Insert title here</title>
+		</head>
+	<body>
+		리스트의 크기: <%=list.size() %>
+		리스트의 형태:	<%= list.toString() %>
+		
+		맵의 크기 :	<%= map.size() %>
+		맵의 형태 :<%= map.toString() %>
+		
+		랜덤값 :<%= ran %>
+		날짜 :<%= now %>
+
+	</body>
+</html>

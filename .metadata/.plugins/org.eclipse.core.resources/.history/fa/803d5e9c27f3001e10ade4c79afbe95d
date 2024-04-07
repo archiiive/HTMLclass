@@ -1,0 +1,29 @@
+<%@page import="java.util.Scanner"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<%
+//더ㅏ블 파스인트 해야함 -> 변환 like toString
+Scanner scan = new Scanner(System.in);
+double bmi1 = scan.nextDouble();  
+
+
+%>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>req_quiz01.jsp</title>
+</head>
+<body>
+	
+		
+		 아이디 : <input type ="text" size="10" name="id"><br>
+		비밀번호 : <input type ="password" size="10" name="pw"><br>
+		 
+		 
+
+
+
+
+</body>
+</html>

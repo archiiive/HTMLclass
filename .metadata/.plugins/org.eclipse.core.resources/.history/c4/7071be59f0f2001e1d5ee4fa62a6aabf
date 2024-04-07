@@ -1,0 +1,38 @@
+<%@page import="java.util.Random"%>
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+    
+<%!
+int total = 0;
+
+public int randomNum(){
+	Random ran = new Random();
+	int num = ran.nextInt(8)+2;
+	return num;
+}
+
+	%>
+
+
+<% 
+	 %>    
+    
+    
+    
+<!DOCTYPE html>
+	<html>
+		<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		</head>
+		<body>
+			<%
+			total++;
+			int ran=randomNum();
+			
+			
+			%>
+		</body>
+</html>

@@ -1,0 +1,15 @@
+package i;
+
+import obj.PersonsDAO;
+
+public class I08_personsMain {
+
+	public static void main(String[] args) {
+		//DAO VO 테스트
+		PersonsDAO Dao = new PersonsDAO();
+		
+		        
+		
+	}
+
+}

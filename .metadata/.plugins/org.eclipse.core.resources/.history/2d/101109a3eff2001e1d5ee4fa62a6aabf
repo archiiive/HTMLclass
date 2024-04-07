@@ -1,0 +1,33 @@
+<%@page import="java.util.Random"%>
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+    
+<%!
+	public int rand(){
+	Random rand = new Random();
+	int rn = rand.nextInt(10);
+	return rn;
+
+
+}
+	%>
+
+
+<%
+			int rand12 =rand();
+	 %>    
+    
+    
+    
+<!DOCTYPE html>
+	<html>
+		<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		</head>
+		<body>
+			rand12 : <%=rand12 %>
+		</body>
+</html>

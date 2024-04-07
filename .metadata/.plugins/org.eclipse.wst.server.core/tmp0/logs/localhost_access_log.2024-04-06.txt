@@ -1,0 +1,2 @@
+0:0:0:0:0:0:0:1 - - [06/Apr/2024:21:04:08 +0900] "GET /jspbasic/request/quiz/req_quiz01.jsp HTTP/1.1" 500 2255
+0:0:0:0:0:0:0:1 - - [06/Apr/2024:21:04:08 +0900] "GET /jspbasic/request/quiz/req_quiz01.jsp HTTP/1.1" 500 2255

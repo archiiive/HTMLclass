@@ -1,0 +1,51 @@
+package i;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class I06_JDBC {
+
+	public static void main(String[] args) {
+		//JDBC 연동 테스트
+		
+		//데이터베이스 연결객체가 필요함(connection class)
+		Connection conn = null;
+		
+		//checkedException : SqlEception
+		
+		try {
+			//1.드라이브 로드
+			//MySQL 6.xx 버전이전:com.mysql.jdbc.Driver
+			//MySQL 6.xx 버전이후 :com.mysql.cj.jdbc.Driver
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			
+			//2.Connection 객체 생성 - DriverManager
+			//Mysql 6.x미만인경우 : jbdc:mysql://hostname:protnum:/Dbname
+			//Mysql 6.xx 이후인경우 : jbdc:mysql://hostname:protnum:/Dbname ? serverTime=UTC
+			// seoul utc :Asia/seoul
+			conn =DriverManager.getConnection(
+					"jdbc.mysql://localhost:3306/testdb"
+					, "root", "!qwe123");
+				System.out.println(conn);
+				System.out.println("DB접속성공");
+		} catch (ClassNotFoundException e) {
+			// TODO: handle exception
+			System.out.println("드라이버 로드 실패");
+		} catch (SQLException sqle) {
+			// TODO: handle exception
+			System.out.println("SQL 연동오류");
+			System.out.println(sqle.getMessage());
+		}finally {
+			try {
+				
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+			
+		}
+		
+
+	}
+
+}

@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@page import="java.util.Random"%>
+
+    <%!
+    
+    public int radnomnu(){
+    	Random ran = new Random();
+    	int num = ran.nextInt();
+    }
+    
+    %>
+    
+    <%
+    int each =0;
+    
+    total++;
+    each++;
+    
+    %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+오늘의 누적요 : <%= i++ %>
+</body>
+</html>
