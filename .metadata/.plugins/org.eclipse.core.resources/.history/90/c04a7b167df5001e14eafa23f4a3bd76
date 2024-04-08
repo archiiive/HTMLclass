@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<%
+		//인증처리를 하는 세션을 삭제
+		session.removeAttribute("user_id");
+		//세션 그자체를 삭제
+		session.invalidate();
+%>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>session_logout.jsp</title>
+</head>
+<body>
+
+</body>
+</html>

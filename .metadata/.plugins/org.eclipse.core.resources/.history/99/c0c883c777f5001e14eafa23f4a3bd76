@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<%
+	/*
+	1.아이디, 비밀번호, 닉네임을 받기
+	2.조건 : 아이디와 비밀번호가 서로 동일하면, user_id
+	
+	
+	*/
+
+
+%>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>session_login_ok.jsp</title>
+</head>
+<body>
+
+</body>
+</html>

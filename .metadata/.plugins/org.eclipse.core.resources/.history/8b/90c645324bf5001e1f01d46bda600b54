@@ -1,0 +1,34 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<%
+	String num = request.getParameter("num");
+	Integer sel = Integer.parseInt(num);
+	
+%>
+	<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>req_video_ok.jsp</title>
+	</head>
+	<body>
+		<%
+			if(num == null){%>
+		잘못된 접근입니다.
+		<%} else if(sel ==1){%>
+		<div>
+			<h2>파이썬 수업</h2>
+			<p>파이썬 수업중 하나...</p>
+			<hr>
+			<iframe width="640" height="480" src="ttps://youtu.be/SXujfC9UtRU"></iframe>
+		</div>
+		
+		
+		<%}%>
+		
+		
+		
+		
+
+	</body>
+</html>

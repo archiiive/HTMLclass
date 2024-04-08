@@ -1,0 +1,36 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>req_video.jsp</title>
+	</head>
+	<body>
+			<!--  테이블 페이지에서 a태그의 url주소 뒤; 에 있는 title변수로 각각의 식별값을 담아서 이동
+			ok 페이지에서는 넘어노는 값에 따라서 if~else if~else형태로 다른 화면이 보이게 처리 -->
+		
+		<div align="center"><!-- 	블럭을 만들어 사용하는 태그 -->
+			<table>
+					<tr>
+						<td>이미지</td>
+						<td>장르</td>
+						<td>이름</td>
+						<td>등록일</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="images/icon.png"></a>
+						</td>
+						<td>장르</td>
+						<td>이름</td>
+						<td>등록일</td>
+					</tr>
+					
+			</table>		
+		</div>	 
+	</body>
+			
+			
+
+</html>

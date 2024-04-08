@@ -1,0 +1,42 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+    
+    <%
+    /*
+    1.아이디 비밀번호를 받고
+    2.id = abc이고, pw =1234 이면 로그인 성공으로 간주
+    	(user_id,id) 값을 받는 쿠키를 생성
+    3.쿠키 문법을 사용 쿠키를 전송
+    	cooke_login.jsp로 이동
+    4.아이디 , 비밀번호가 틀렸다면 ,cookie_login.jsp로 이동.
+    5.아이디와 비밀번호가 맞으면 welcome페이지로 이동해서 쿠키를 사용하여 "id님 환영합니다를 출력합니다.
+    */
+   String id = request.getParameter("id");
+    String pw = request.getParameter("pwd");
+    String idCheck = request.getParameter("idCheck");
+  
+    
+    if(id.equals("abc") && pw.equals("1234"));{
+    	//d이렇게 되면 로그인 그렇지 않으면 로그인 실패
+    	Cookie userId= new Cookie("user_id",id);
+    	userId.setMaxAge(30);//30s
+    	
+    }else {
+    	//ㄱ로그인실패
+    	response.sendRedirect("cookie_login.jsp");
+    }
+    
+    
+    
+    %>
+    
+<html>
+<head>
+<meta charset="UTF-8">
+<title>cookie_login_ok.jsp</title>
+</head>
+<body>
+
+</body>
+</html>
