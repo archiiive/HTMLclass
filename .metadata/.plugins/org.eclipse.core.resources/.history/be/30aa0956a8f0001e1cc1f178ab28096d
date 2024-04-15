@@ -1,5 +1,0 @@
-package mariadb;
-
-public class PersonsDAO {
-
-}
